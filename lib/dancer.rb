@@ -2,6 +2,14 @@ require_relative './class_methods_module.rb'
 require_relative './dance_module.rb'
 
 module Dance
+   include Dance
+ 
+  attr_accessor :name
+ 
+  def initialize(name)
+    @name = name
+  end
+  
   def twirl
     "I'm twirling!"
   end
@@ -17,4 +25,6 @@ module Dance
   def take_a_bow
     "Thank you, thank you. It was a pleasure to dance for you all."
   end
+  
+ 
 end
